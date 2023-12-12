@@ -1,5 +1,6 @@
 #include "register_types.h"
 #include "world.h"
+#include "camera_controller.h"
 #include <gdextension_interface.h>
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/core/defs.hpp>
@@ -19,6 +20,7 @@ namespace FlecsModule
 		}
 		ClassDB::register_class<World>();
 		ClassDB::register_class<Rendering>();
+		ClassDB::register_class<CameraController>();
 	}
 
 	void uninitialize(ModuleInitializationLevel p_level)

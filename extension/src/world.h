@@ -10,7 +10,7 @@ namespace FlecsModule
     class World : public godot::RefCounted
     {
         GDCLASS(World, godot::RefCounted);
-
+    
     protected:
         static void _bind_methods();
         flecs::world world;

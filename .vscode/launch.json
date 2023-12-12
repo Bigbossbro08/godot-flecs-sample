@@ -8,11 +8,11 @@
 			"name": "Run Demo [FROM EDITOR] - [DEBUG MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "E:\\repos\\Godot_v4.2-stable_mono_win64\\Godot_v4.2-stable_mono_win64.exe",
 			"args": [
 				"--editor",
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/game",
 				"--verbose",
 				"--debug",
 				"--stdout"
@@ -21,15 +21,16 @@
 			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"console": "internalConsole",
+			"preLaunchTask": "build-extension [dev build]",
 		},
         {
 			"name": "Run Demo [FROM GAME] - [DEBUG MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "E:\\repos\\Godot_v4.2-stable_mono_win64\\Godot_v4.2-stable_mono_win64.exe",
 			"args": [
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/game",
 				"--verbose",
 				"--debug",
 				"--stdout"
@@ -38,16 +39,17 @@
 			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"console": "internalConsole",
+			"preLaunchTask": "build-extension [dev build]",
 		},
         {
 			"name": "Run Demo [FROM EDITOR] - [TEST MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "E:\\repos\\Godot_v4.2-stable_mono_win64\\Godot_v4.2-stable_mono_win64.exe",
 			"args": [
 				"--editor",
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/game",
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
@@ -58,16 +60,22 @@
 			"name": "Run Demo [FROM GAME] - [TEST MODE]",
 			"type": "cppvsdbg",
 			"request": "launch",
-			"program": "path to the godot executable",
+			"program": "E:\\repos\\Godot_v4.2-stable_mono_win64\\Godot_v4.2-stable_mono_win64.exe",
 			"args": [
 				"--path",
-				"${workspaceFolder}/project",
+				"${workspaceFolder}/game",
 			],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"console": "internalConsole",
 		},
+		{
+			"name": "Attach",
+			"type": "cppvsdbg",
+			"request": "attach",
+			"processId":"${command:pickProcess}"
+		}
     ]
 }
 

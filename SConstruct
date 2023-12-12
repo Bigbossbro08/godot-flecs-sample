@@ -21,6 +21,8 @@ def add_sources(sources, dir, extension):
 sources = []
 add_sources(sources, "extension/src", "cpp")
 add_sources(sources, "extension/src/flecs", "c")
+add_sources(sources, "extension/src/deps", "c")
+add_sources(sources, "extension/src/deps/flecs-math", "c")
 
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["extension/src/"])

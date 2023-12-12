@@ -26,8 +26,9 @@ namespace FlecsModule
         Rendering();
         ~Rendering();
         void spawn_entity(Ref<World> p_world, String name, float x, float y, float z, float vel_x, float vel_y, float vel_z);
+        int get_spawn_count();
         int spawned;
+        Node3D* camera;
     };
-
-#endif // RENDERING_CLASS_H
 }
+#endif // RENDERING_CLASS_H

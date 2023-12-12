@@ -7,34 +7,19 @@
 #include <godot_cpp/classes/rendering_server.hpp>
 #include <godot_cpp/classes/world3d.hpp>
 #include <godot_cpp/classes/mesh.hpp>
+#include <godot_cpp/classes/random_number_generator.hpp>
 
 namespace FlecsModule
 {
-    struct Position
-    {
-        float x, y, z;
-    };
-
-    struct Velocity
-    {
-        float x, y, z;
-    };
-
-    struct Color
-    {
-        float r, g, b;
-    };
-
-    struct MultiMeshInstance
-    {
-        godot::RID id;
-    };
-
     struct godot_flecs
     {
         godot_flecs(flecs::world &world); // Ctor that loads the module
     };
-
+    
+    struct RNG {
+        std::shared_ptr<godot::RandomNumberGenerator> rng = std::make_shared<godot::RandomNumberGenerator>();
+        //godot::RandomNumberGenerator rng = RandomNumberGenerator();
+    };
 }
 
 #endif

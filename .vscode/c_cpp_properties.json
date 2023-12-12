@@ -7,7 +7,9 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/godot-cpp/gen/include",
-                "${workspaceFolder}/src"
+                "${workspaceFolder}/extension/src",
+                "${workspaceFolder}/extension/src/deps",
+                "${workspaceFolder}/extension/src/deps/flecs-math"
             ],
             "defines": [
                 "_DEBUG",
