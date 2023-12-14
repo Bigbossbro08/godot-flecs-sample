@@ -29,7 +29,7 @@ namespace FlecsModule
         auto count = RenderingServer::get_singleton()->multimesh_get_visible_instances(get_base());
         if (spawned >= count)
         {
-            return;
+            //return;
         }
 
         p_world->get_world()->entity(name.utf8().get_data())

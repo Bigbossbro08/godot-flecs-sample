@@ -9,8 +9,8 @@
 #include <world.h>
 #include <deps/unit_entity.h>
 #include <godot_cpp/classes/random_number_generator.hpp>
-#include <deps/flecs-math/vector.h>
-#define FLECS_MATH_EXPORT
+//#include <deps/flecs-math/vector.h>
+//#define FLECS_MATH_EXPORT
 
 class Node;
 using namespace godot;
@@ -47,7 +47,7 @@ namespace FlecsModule
 
         ecs.system<Position, const Velocity>("Move")
         .each([](Position &p, const Velocity &v) { 
-            ecs_vec3_add(p, v, p);
+            //ecs_vec3_add(p, v, p);
             p.x += v.x;
             p.y += v.y;
             p.z += v.z;

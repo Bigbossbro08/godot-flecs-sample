@@ -2,26 +2,26 @@
 #define UNIT_ENTITY_H
 
 #include <godot_cpp/core/class_db.hpp>
-#include <deps/flecs-math/vector.h>
+//#include <deps/flecs-math/vector.h>
 #include <flecs/flecs.h>
 
 namespace FlecsModule
 {
-    struct Position : EcsVec3
+    struct Position
     {
         //EcsVec3 vec3;
-        // float x, y, z;
+        float x, y, z;
     };
 
-    struct Velocity : EcsVec3
+    struct Velocity
     {
         //EcsVec3 vec3;
-        //float x, y, z;
+        float x, y, z;
     };
 
-    struct Target : EcsVec3 {
+    struct Target {
         //EcsVec3 vec3;
-        //float x, y, z;
+        float x, y, z;
     };
 
     struct Color
